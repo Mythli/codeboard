@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Anhalt</title>
+
+	<link href="css/lib/bootstrap.min.css" rel="stylesheet">
+	<link href="css/lib/animate.css" rel="stylesheet">
+	<link href="css/screen.css" rel="stylesheet">
+
+	<script type="text/javascript" src="js/lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/lib/handlebars-1.0.0.js"></script>
+	<script type="text/javascript" src="js/lib/ember-1.1.1.js"></script>
+	<script type="text/javascript" src="js/lib/ember-data-1.0.0-beta.3.js"></script>
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/lib/Respond.js"></script>
+		<script type="text/javascript" src="js/lib/html5shiv.js"></script>
+	<![endif]-->
+
+	<script src="js/application.js"></script>
+	<script src="js/router.js"></script>
+	<script src="js/model/githubActivity.js"></script>
+</head>
+<body>
+	<script type="text/x-handlebars">
+		<div id="about-container">
+			<ul id="navigation" class="list-inline">
+				{{#each links}}
+					<li>
+						<a {{bind-attr href=url}} {{bind-attr title=title}} {{bind-attr target=target}}>{{name}}</a>
+					</li>
+				{{/each}}
+			</ul>
+			<div id="about" class="clearfix">
+				<div id="picture-container">
+					<img id="picture" src="img/picture.jpg">
+				</div>
+				<div id="description">
+					<h1>{{title}}</h1>
+					<h2>{{subTitle}}</h2>
+				</div>
+			</div>
+		</div>
+		<ul id="activitys" class="list-unstyled animated fadeInLeft">
+			<li class="clearfix">
+				<div class="activity-meta">
+					<div class="activity-icon push-icon"></div>
+					<p class="activity-time">
+						6 hours ago
+					</p>
+				</div>
+				<div class="activity-message">
+					<h1>pushed to master at Mythli/tech</h1>
+					<p>added color select, reverted back to local link data storage.</p>
+					<p>updated path. TODO: update all paths.</p>
+					<p>basic persistence logic</p>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="activity-meta">
+					<div class="activity-icon follow-icon"></div>
+					<p class="activity-time">
+						21 hours ago
+					</p>
+				</div>
+				<div class="activity-message">
+					<h1>started following someara</h1>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="activity-meta">
+					<div class="activity-icon star-icon"></div>
+					<p class="activity-time">
+						2 days ago
+					</p>
+				</div>
+				<div class="activity-message">
+					<h1>starred daneden/animate.css</h1>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="activity-meta">
+					<div class="activity-icon issue-icon"></div>
+					<p class="activity-time">
+						5 days ago
+					</p>
+				</div>
+				<div class="activity-message">
+					<h1>commented on emberjs/website</h1>
+					<p>Morbi nec mauris malesuada, mollis urna ac, elementum mauris. Phasellus vel urna vitae erat egestas dignissi...</p>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="activity-meta">
+					<div class="activity-icon fork-icon"></div>
+					<p class="activity-time">
+						5 days ago
+					</p>
+				</div>
+				<div class="activity-message">
+					<h1>commented on emberjs/website</h1>
+					<p>Morbi nec mauris malesuada, mollis urna ac, elementum mauris. Phasellus vel urna vitae erat egestas dignissi...</p>
+				</div>
+			</li>
+		</ul>
+	</script>
+</body>
