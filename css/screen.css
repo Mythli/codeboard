@@ -26,6 +26,10 @@ a:hover {
 	opacity: 0.2;
 }
 
+#navigation a:hover {
+	opacity: 1;
+}
+
 #about-container {
 	position: fixed;
 	z-index: 10;
