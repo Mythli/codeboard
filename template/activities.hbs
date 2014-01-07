@@ -1,0 +1,32 @@
+<ul id="activities" class="list-unstyled animated fadeInLeft">
+	{{#each activities}}
+		<li class="clearfix">
+			{{#if url}}<a href="{{url}}" target="_blank">{{/if}}
+				<div class="activity-meta">
+					<div class="activity-icon {{iconClass}}"></div>
+					<p class="activity-time">
+						{{time}}
+					</p>
+				</div>
+				<div class="activity-message">
+					{{#if isWatchEvent}}
+						<h1>starred
+							<a href="{{repoUrl}}" target="_blank">{{repoName}}</a>
+						</h1>
+					{{/if}}
+
+					{{#if isPushEvent}}
+						<h1>pushed to
+							<a href="{{repoUrl}}" target="_blank">{{repoName}}</a>
+						</h1>
+						<p>
+							{{#each commits}}
+								{{message}}<br>
+							{{/each}}
+						</p>
+					{{/if}}
+				</div>
+			{{#if url}}</a>{{/if}}
+		</li>
+	{{/each}}
+</ul>

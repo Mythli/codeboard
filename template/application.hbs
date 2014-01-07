@@ -1,0 +1,20 @@
+<div id="about-container">
+	<ul id="navigation" class="list-inline">
+		{{#each links}}
+			<li>
+				<a href="{{url}}" title="{{title}}" target="{{target}}">{{name}}</a>
+			</li>
+		{{/each}}
+	</ul>
+	<div id="about" class="clearfix">
+		<div id="picture-container">
+			<img id="picture" src="img/picture.jpg">
+		</div>
+		<div id="description">
+			<h1>{{title}}</h1>
+			<h2>{{subTitle}}</h2>
+		</div>
+	</div>
+</div>
+<div id="site-content">
+</div>
