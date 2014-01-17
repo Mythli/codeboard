@@ -1,6 +1,6 @@
 App.data = {
 	title: 'Tobias Anhalt',
-	subTitle: 'Designer, Entrepreneur, Developer',
+	subTitle: 'Developer, Entrepreneur, Futurist',
 
 	links: [
 		{
